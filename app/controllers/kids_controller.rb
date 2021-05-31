@@ -13,8 +13,11 @@ class KidsController < ApplicationController
 
   def create
     @kid = Kid.new(kid_params)
-    @kid.save
+    if @kid.save
     redirect_to kid_path(@kid)
+    else
+      render :new
+    end
   end
 
   def edit
