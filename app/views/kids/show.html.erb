@@ -2,3 +2,17 @@
 <p><%= @kid.age %></p>
 <p><%= @kid.localisation %></p>
 <p><%= @kid.service %></p>
+
+<div class="container">
+  <h2><%= @kid.name %></h2>
+  <p><%= @kid.age %></p>
+  <p><%= @kid.localisation %></p>
+  <p><%= @kid.service %></p>
+  <p><%= @kid.price %></p>
+  <hr>
+  <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
+  <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
+  <%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
+  <hr>
+</div>
+

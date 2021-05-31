@@ -3,3 +3,4 @@ class Booking < ApplicationRecord
 
   validates :date, :hour, presence: true
 end
+
