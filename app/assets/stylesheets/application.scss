@@ -11,3 +11,17 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none ;
+  color: gray;
+}
+
+.container h1 {
+  font-size: 48px;
+  font-weight: bold;
+}

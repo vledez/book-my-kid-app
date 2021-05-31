@@ -5,7 +5,6 @@ class KidsController < ApplicationController
   end
 
   def show
-    @kid = Kid.find(params[:id])
   end
 
   def new
@@ -19,17 +18,14 @@ class KidsController < ApplicationController
   end
 
   def edit
-    @kid = Kid.find(params[:id])
   end
 
   def update
-    @kid = Kid.find(params[:id])
     @kid.update(kid_params)
     redirect_to kid_path(@kid)
   end
 
   def destroy
-    @kid = Kid.find(params[:id])
     @kid.destroy
     redirect_to kids_path
   end
