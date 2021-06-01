@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  belongs_to :kids
+  belongs_to :kid
 
   validates :date, :hour, presence: true
 end
