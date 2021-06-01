@@ -14,7 +14,7 @@ class KidsController < ApplicationController
   def create
     @kid = Kid.new(kid_params)
     if @kid.save
-    redirect_to kid_path(@kid)
+      redirect_to kid_path(@kid)
     else
       render :new
     end
