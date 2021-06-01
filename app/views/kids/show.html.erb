@@ -5,7 +5,12 @@
   <p><%= @kid.service %></p>
   <p><%= @kid.price %></p>
   <hr>
+
+  <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
+  <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn btn-success" %>
   <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
   <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
   <%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
+  <hr>
 </div>
+
