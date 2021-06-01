@@ -1,10 +1,35 @@
 <div class="container">
-  <h1>Kids list</h1>
+
+  <div class="header_index">
+
+      <h1>Children list</h1>
+
+      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+
+  </div>
 
   <div class="cards">
       <% @kids.each do |kid| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url()">
-          <%= link_to kid.name, kid_path(kid) %>
+        <div class="card-kid">
+          <div class="card_picture" style="background-image: url(https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+          </div>
+          <div class="info_prix">
+            <p><%= kid.name%></p>
+            <p><%= kid.price%></p>
+          </div>
+          <div class="location_review">
+            <%= kid.localisation%>
+          </div>
+          <div>
+            <%= link_to kid.name, kid_path(kid), class: "btn btn-flat" %>
+          </div>
         </div>
       <% end %>
   </div>
