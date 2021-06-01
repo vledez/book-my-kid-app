@@ -12,3 +12,4 @@ Kid.create(name: "Jean", age: 10, localisation:"Marseille", service: "Jardinage"
 Kid.create(name: "Ben", age: 8, localisation:"Lyon", service: "Nettoyage de vitres", price:10)
 Kid.create(name: "Lucie", age: 7, localisation:"Bordeaux", service: "Repassage", price:20)
 Kid.create(name: "Emily", age: 11, localisation:"Paris", service: "Cuisine", price:30)
+Kid.create(name: "Tom", age: 11, localisation:"Nice", service: "Bricolage", price:30)
