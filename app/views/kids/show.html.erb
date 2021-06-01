@@ -1,16 +1,46 @@
 <div class="container">
-  <h2><%= @kid.name %></h2>
-  <p><%= @kid.age %></p>
-  <p><%= @kid.localisation %></p>
-  <p><%= @kid.service %></p>
-  <p><%= @kid.price %></p>
-  <hr>
 
-  <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
-  <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn btn-success" %>
-  <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
-  <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
-  <%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
-  <hr>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="col-8">
+      <h1><%= @kid.name %></h1>
+      <h3>Description</h3>
+        <p>
+          Un paragraphe est une section de texte en prose vouée au développement d'un point particulier souvent au moyen de plusieurs phrases, dans la continuité du précédent et du suivant.
+          Sur le plan typographique, le paragraphe est compris entre deux alinéas, qui s'analysent aussi comme une « ponctuation blanche ».
+          Le symbole du paragraphe est §. La fin d'un paragraphe était autrefois indiquée par un pied-de-mouche
+        </p>
+    </div>
+
+    <div class="col-4 d-inline-flex flex-column align-items-center">
+      <div>
+        <img src="https://picsum.photos/400/300" class="avatar-xlarge">
+      </div>
+      <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn btn-success" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+
+      <h2><%= @kid.name %></h2>
+        <p><%= @kid.age %></p>
+        <p><%= @kid.localisation %></p>
+        <p><%= @kid.service %></p>
+        <p><%= @kid.price %></p>
+        <hr>
+     </div>
+    <div class="col-8">
+      <h3>Map</h3>
+      <img src="https://picsum.photos/700/300" alt="Avatar">
+
+          <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
+          <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
+          <%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
+          <hr>
+    </div>
+  </div>
 </div>
+
+
+
 
