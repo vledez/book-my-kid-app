@@ -7,6 +7,11 @@
   <% if @kid.photo.attached? %>
   <%= cl_image_tag @kid.photo.key, height: 300, width: 400, crop: :fill %> 
   <% end %>
+  <div id="map"
+     style="width: 400px; height: 300px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   <hr>
   <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
   <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn btn-success" %>

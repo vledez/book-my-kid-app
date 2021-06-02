@@ -7,6 +7,10 @@
   padding: 10px 50px;
   color: rgba(31, 30, 30, 0.692);
   margin-top: 20px;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 .footer-links {
   display: flex;
