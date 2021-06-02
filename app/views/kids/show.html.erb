@@ -2,7 +2,7 @@
 
   <div class="d-flex flex-row justify-content-between">
     <div class="col-8">
-      <h1><%= @kid.name %>, Marseille</h1>
+      <h1><%= @kid.name %>, <%= @kid.localisation %></h1>
       <h2>Description</h2>
         <p>
           Un paragraphe est une section de texte en prose vouée au développement d'un point particulier souvent au moyen de plusieurs phrases, dans la continuité du précédent et du suivant.
@@ -13,9 +13,12 @@
 
     <div class="col-4 d-inline-flex flex-column">
       <div>
-        <img src="https://picsum.photos/400/400" alt="" class="avatar-xlarge">
+        <% if @kid.photo.attached? %>
+          <%= cl_image_tag @kid.photo.key, height: 300, width: 340, crop: :fill %> 
+        <% end %>
       </div>
       <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn-flat" %>
+      <%= link_to 'Edit', edit_kid_path(@kid), class: "btn-flat" %>
     </div>
   </div>
 
@@ -25,7 +28,7 @@
       <div>
         <h2>Masterized skils</h2>
           <div class="global-skill">
-            <img url="https://thenounproject.com/search/?q=dog&i=1609864/150/150" alt="">
+            <img src="https://picsum.photos/150/150" alt="">
             <div class="skill">
               <h4>Cooking</h4>
               <p>Knows how to cook</p>
@@ -70,7 +73,7 @@
       <div>
         <h2>Map</h2>
         <div id="map"
-          style="width: 400px; height: 300px;"
+          style="width: 700px; height: 350px;"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
