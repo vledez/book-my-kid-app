@@ -13,8 +13,11 @@ class KidsController < ApplicationController
 
   def create
     @kid = Kid.new(kid_params)
-    @kid.save
-    redirect_to kid_path(@kid)
+    if @kid.save
+      redirect_to kid_path(@kid)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -33,7 +36,7 @@ class KidsController < ApplicationController
   private
   
   def kid_params
-    params.require(:kid).permit(:name, :age, :localisation, :service, :price, :user_id)
+    params.require(:kid).permit(:name, :age, :localisation, :service, :price, :photo, :user_id)
   end
 
   def set_kid
