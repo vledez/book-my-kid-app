@@ -1,10 +1,10 @@
 .footer {
-  background: #b4b2b2;
+  background: white;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
+  align-items: flex-start;
+  justify-content: center;
+  height: 200px;
+  padding: 10px 50px;
   color: rgba(31, 30, 30, 0.692);
   margin-top: 20px;
 }
@@ -24,4 +24,21 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.logo-link img {
+  width: 150px;
+}
+
+.social {
+  display: flex;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.footer p {
+  margin: 5px;
 }
