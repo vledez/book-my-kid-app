@@ -1,6 +1,83 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <div class="header">
 
-<% if user_signed_in? %>
-  <p>Hello <%= current_user.email %></p>
-<% end %>
+    <div class="brand">
+      <div class="animation-area">
+        <div class="child-area">
+          <%= image_tag("child.png") %>
+        </div>
+      </div>
+      <h1>Book My Kid</h1>
+      <h3 id="header-head">Get rid of your chores: let them be done by the strongest children in your area</h3>
+    </div>
+    <a href="http://localhost:3000/kids" class="big-btn" >Book a child</a>
+  </div>
+
+<div class="container">
+  <div class="reassurance-bar">
+    <div class="reassurance-card">
+      <%=image_tag("premium.png", :class => "img_reassurance") %>
+      <p>Premium quality children:<br>right from the producers</p>
+    </div>
+    <div class="reassurance-card">
+      <%=image_tag("swap.png", :class => "img_reassurance")%>
+      <p>Satisfied or get another<br>child for free</p>
+    </div>
+    <div class="reassurance-card">
+      <%=image_tag("punch.png", :class => "img_reassurance")%>
+      <p>Right to protect yourself<br>(kids can be violent)</p>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <h3><strong>Testimonials from previous happy renters</strong></h3>
+    <div class="reviews">
+      <div class="review" id="review-left">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="comment">
+          <p>Incredible little man: he pimped my garden in only a few hours</p>
+        </div>
+      </div>
+      <div class="review" id="review-right">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="comment">
+          <p>I finally have some new and qualitative drawings on my fridge! Not the horrible ones from my sons...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="month-child">
+    <h3><strong>Child of the month</strong></h3>
+    <div class="child-card">
+      <div class="tags">
+      <p>Best-seller!</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <h3>Ben</h3>
+    </div>
+    <a href="#">Discover his skills</a>
+  </div>
+
+
+<!--   <% if user_signed_in? %>
+    <p>Hello <%= current_user.email %></p>
+  <% end %> -->
+</div>
