@@ -4,7 +4,7 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -12,6 +12,8 @@
   height: 200px;
   background-size: cover;
   background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .cards {
@@ -19,13 +21,46 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-right: 50px;
   grid-gap: 16px;
+  border-radius: 5px;
 }
 
 .info_prix {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
 }
 
+.location_review {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+}
+
+.custom-marker {
+  padding: 5px;
+  color: #2E2E2E;
+  font-size: 18px;
+}
+
+.cards p {
+  font-family: Mukta;
+  color: #2E2E2E;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.fas .fa-map-marker-alt {
+  margin-right: 30px;
+}
+
+.book-me a {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
 //   .cards {
