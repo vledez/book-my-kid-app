@@ -5,6 +5,12 @@ class KidsController < ApplicationController
   end
 
   def show
+    @markers = {
+        lat: @kid.latitude,
+        lng: @kid.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { kid: @kid }),
+        image_url: helpers.asset_url('marker2.png')
+      }
   end
 
   def new
