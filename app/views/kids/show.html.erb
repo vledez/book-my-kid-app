@@ -1,17 +1,117 @@
 <div class="container">
-  <h2><%= @kid.name %></h2>
+
+  <div class="d-flex flex-row justify-content-between">
+    <div class="col-8">
+      <h1><%= @kid.name %>, Marseille</h1>
+      <h2>Description</h2>
+        <p>
+          Un paragraphe est une section de texte en prose vouée au développement d'un point particulier souvent au moyen de plusieurs phrases, dans la continuité du précédent et du suivant.
+          Sur le plan typographique, le paragraphe est compris entre deux alinéas, qui s'analysent aussi comme une « ponctuation blanche ».
+          Le symbole du paragraphe est §. La fin d'un paragraphe était autrefois indiquée par un pied-de-mouche
+        </p>
+    </div>
+
+    <div class="col-4 d-inline-flex flex-column">
+      <div>
+        <img src="https://picsum.photos/400/400" alt="" class="avatar-xlarge">
+      </div>
+      <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn-flat" %>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row">
+
+    <div class="col-4 ">
+      <div>
+        <h2>Masterized skils</h2>
+          <div class="global-skill">
+            <img url="https://thenounproject.com/search/?q=dog&i=1609864/150/150" alt="">
+            <div class="skill">
+              <h4>Cooking</h4>
+              <p>Knows how to cook</p>
+            </div>
+          </div>
+          <div class="global-skill">
+            <img src="https://picsum.photos/150/150" alt="">
+            <div class="skill">
+              <h4>Cooking</h4>
+              <p>Knows how to cook</p>
+            </div>
+          </div>
+          <div class="global-skill">
+            <img src="https://picsum.photos/150/150" alt="">
+            <div class="skill">
+              <h4>Cooking</h4>
+              <p>Knows how to cook</p>
+            </div>
+          </div>
+      </div>
+
+      <div>
+        <h2>Skills in progress</h2>
+          <div class="global-skill">
+            <img src="https://picsum.photos/150/150" alt="">
+            <div class="skill">
+              <h4>Cooking</h4>
+              <p>Knows how to cook</p>
+            </div>
+          </div>
+          <div class="global-skill">
+            <img src="https://picsum.photos/150/150" alt="">
+            <div class="skill">
+              <h4>Cooking</h4>
+              <p>Knows how to cook</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div>
+        <h2>Map</h2>
+        <img src="https://picsum.photos/700/300" alt="Avatar">
+      </div>
+
+      <div>
+        <div class=" review flex-column">
+          <h2>Reviews</h2>
+          <div class="card-review" >
+           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-review-infos">
+              <p>Maurice</p>
+              <h2>Product name</h2>
+              <p>Product description withrelevant info only.</p>
+            </div>
+          </div>
+          <div class="card-review" >
+           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-review-infos">
+              <p>Maurice</p>
+              <h2>Product name</h2>
+              <p>Product description withrelevant info only.</p>
+            </div>
+          </div>
+          <div class="card-review" >
+           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-review-infos">
+              <p>Maurice</p>
+              <h2>Product name</h2>
+              <p>Product description withrelevant info only.</p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
+<%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
+<%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
+<h2><%= @kid.name %></h2>
   <p><%= @kid.age %></p>
   <p><%= @kid.localisation %></p>
   <p><%= @kid.service %></p>
   <p><%= @kid.price %></p>
-  <% if @kid.photo.attached? %>
-  <%= cl_image_tag @kid.photo.key, height: 300, width: 400, crop: :fill %> 
-  <% end %>
-  <hr>
-  <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
-  <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn btn-success" %>
-  <%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
-  <%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
-  <hr>
-</div>
-
