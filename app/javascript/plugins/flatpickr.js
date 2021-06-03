@@ -4,7 +4,7 @@ import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 const initFlatpickr = () => {
   flatpickr(".datepicker", {
     altInput: true,
-    allowInput: true,
+    allowInput: true
   });
 }
 
