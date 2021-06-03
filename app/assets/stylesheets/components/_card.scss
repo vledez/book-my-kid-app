@@ -34,9 +34,15 @@
 
 .location_review {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 10px;
   height: 40px;
+}
+
+#localisation {
+  margin-left: 100px;
+  padding: 0;
 }
 
 .custom-marker {
