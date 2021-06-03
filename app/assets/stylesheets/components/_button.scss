@@ -10,7 +10,6 @@
 
 .btn-flat:hover {
   background-color: #D7E2D5;
-
   color: white;
 }
 
@@ -26,4 +25,14 @@
 
 .btn-ghost:hover {
   opacity: 1;
+}
+
+.btn-booking {
+  color: white;
+  text-align: center;
+  padding: 8px 24px;
+  background-color: #D17D67;
+  border: 1px solid #D17D67;
+  border-radius: 8px ;
+  transition: background-color 0.3s ease;
 }

@@ -6,4 +6,7 @@ class Kid < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_localisation?
   validates :name, presence: true
   
+  include PgSearch::Model
+  pg_search_scope :search, against: [ :localisation, :service ], using: { tsearch: { prefix: true } }
+  
 end
