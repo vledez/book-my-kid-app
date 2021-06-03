@@ -18,7 +18,7 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-right: 50px;
   grid-gap: 16px;
   border-radius: 5px;
@@ -34,9 +34,15 @@
 
 .location_review {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 10px;
   height: 40px;
+}
+
+#localisation {
+  margin-left: 100px;
+  padding: 0;
 }
 
 .custom-marker {
@@ -60,6 +66,12 @@
 .book-me a {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.cards-review {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
 }
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
