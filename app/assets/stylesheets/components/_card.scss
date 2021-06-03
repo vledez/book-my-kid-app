@@ -61,6 +61,12 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+.cards-review {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+}
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
 //   .cards {
