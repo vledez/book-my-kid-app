@@ -3,8 +3,8 @@
   background-size: cover;
   background-position: bottom;
   display: flex;
-  width: 100%;
-  height: 700px;
+  width: 100vw;
+  height: 80vh;
   min-width: -webkit-fill-available;
   justify-content: space-around;
     a {
@@ -16,9 +16,15 @@
       align-items: center;
       margin-top: 200px;
   }
-
 }
 
+
+.text_header {
+  min-width: 75%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20%;
+}
 .brand {
   max-width: 320px;
   max-height: 400px;
@@ -28,14 +34,24 @@
   margin-bottom: 100px;
   z-index: 5;
   position: relative;
+  h3 {
+  backdrop-filter: blur(10px);
+  }
+
 }
 
 .big-btn {
   width: 180px;
-  height: 40px;
-  color: $ocre;
-  font-size: 1.15rem;
+  height: 50px;
+  color: #D17D67;
+  font-size: 1.25rem;
+  flex-direction: row-reverse;
 }
+
+
+// BLUR BACKGROUND
+
+
 
 // CHILD ANIMATION
 
@@ -46,13 +62,14 @@
 
 .child-area{
   position: absolute;
+  filter: brightness(120%);
   top: 0;
   left: 0;
   z-index: -20;
   width: 100%;
   height: 100px;
   animation-name: child;
-  animation-duration: 4s;
+  animation-duration: 6s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;

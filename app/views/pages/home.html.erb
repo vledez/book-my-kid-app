@@ -4,25 +4,27 @@
       <%=image_tag("child.png") %>
     </div>
   </div>
-  <div class="brand">
-    <h1>Book My Kid</h1>
-    <h3 id="header-head">Get rid of your chores: let them be done by the strongest children in your area</h3>
+  <div class="text_header">
+    <div class="brand">
+      <h1>Book My Kid</h1>
+      <h3 id="header-head">Get rid of your chores, and children: let them do by the strongest children in your area</h3>
+    </div>
+    <a href="/kids" class="big-btn hover shadow-btn" >Book a child</a>
   </div>
-  <a href="/kids" class="big-btn" >Book a child</a>
 </div>
 
 <div class="container">
   <div class="reassurance-bar">
     <div class="reassurance-card">
-      <%=image_tag("premium.png", :class => "img_reassurance") %>
+      <%=image_tag("premium.png", :class => "img_reassurance hover") %>
       <p>Premium quality children:<br>right from the producers</p>
     </div>
     <div class="reassurance-card">
-      <%=image_tag("swap.png", :class => "img_reassurance")%>
+      <%=image_tag("swap.png", :class => "img_reassurance hover")%>
       <p>Satisfied or get another<br>child for free</p>
     </div>
     <div class="reassurance-card">
-      <%=image_tag("punch.png", :class => "img_reassurance")%>
+      <%=image_tag("punch.png", :class => "img_reassurance hover")%>
       <p>Right to protect yourself<br>(kids can be violent)</p>
     </div>
   </div>
@@ -30,7 +32,7 @@
   <div class="testimonials">
     <h3><strong>Testimonials from previous happy renters</strong></h3>
     <div class="reviews">
-      <div class="review" id="review-left">
+      <div class="review shadow-card" id="review-left">
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -42,7 +44,7 @@
           <p>Incredible little man: he pimped my garden in only a few hours</p>
         </div>
       </div>
-      <div class="review" id="review-right">
+      <div class="review shadow-card" id="review-right">
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -57,23 +59,25 @@
     </div>
   </div>
 
-  <div class="month-child">
-    <h3><strong>Child of the month</strong></h3>
-    <div class="child-card">
-      <div class="tags">
-      <p>Best-seller!</p>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+  <%= link_to kid_path(Kid.first) do %>
+    <div class="month-child">
+      <h3><strong>Child of the month</strong></h3>
+      <div class="child-card hover shadow-card">
+        <div class="tags">
+        <p>Best-seller!</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
         </div>
+        <h3>Bob le Bricoleur</h3>
       </div>
-      <h3>Ben</h3>
+      <!-- <a href="#">Discover his skills</a> -->
     </div>
-    <a href="#">Discover his skills</a>
-  </div>
+  <% end %>
 
 
 <!--   <% if user_signed_in? %>
