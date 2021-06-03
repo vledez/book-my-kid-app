@@ -1,0 +1,36 @@
+.header {
+  background-image: url(hand-bcg.png);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  width: 100vh;
+  height: 70vh;
+  min-width: -webkit-fill-available;
+  justify-content: space-around;
+    a {
+      color: white;
+      background-color: $button;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+    h1 {
+      padding-top: 50px
+  }
+}
+
+.brand {
+  max-width: 320px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.big-btn {
+  width: 180px;
+  height: 40px;
+  color: $ocre;
+  font-size: 1.15rem;
+}
