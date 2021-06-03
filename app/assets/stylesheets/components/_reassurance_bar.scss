@@ -1,7 +1,11 @@
+
+
 .reassurance-bar {
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 0px 20%;
+  background-color: white;
 }
 
 .reassurance-card {
@@ -13,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+
   p {
     position: absolute;
     bottom: 0;
