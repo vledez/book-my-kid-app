@@ -14,11 +14,10 @@
     <div class="col-4 d-inline-flex flex-column">
       <div>
         <% if @kid.photo.attached? %>
-          <%= cl_image_tag @kid.photo.key, height: 300, width: 340, crop: :fill %> 
+          <%= cl_image_tag @kid.photo.key, class: "avatar-xlarge" %>
         <% end %>
       </div>
       <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn-flat" %>
-      <%= link_to 'Edit', edit_kid_path(@kid), class: "btn-flat" %>
     </div>
   </div>
 
@@ -28,24 +27,24 @@
       <div>
         <h2>Masterized skils</h2>
           <div class="global-skill">
-            <img src="https://picsum.photos/150/150" alt="">
+            <i class="fas fa-utensils" style="font-size:50px"></i>
             <div class="skill">
               <h4>Cooking</h4>
               <p>Knows how to cook</p>
             </div>
           </div>
           <div class="global-skill">
-            <img src="https://picsum.photos/150/150" alt="">
+            <i class="fas fa-drafting-compass" style="font-size:50px"></i>
             <div class="skill">
-              <h4>Cooking</h4>
-              <p>Knows how to cook</p>
+              <h4>Drawing</h4>
+              <p>Knows how to draw</p>
             </div>
           </div>
           <div class="global-skill">
-            <img src="https://picsum.photos/150/150" alt="">
+            <i class="fas fa-tools" style="font-size:50px"></i>
             <div class="skill">
-              <h4>Cooking</h4>
-              <p>Knows how to cook</p>
+              <h4>Building</h4>
+              <p>Knows how to build</p>
             </div>
           </div>
       </div>
@@ -53,17 +52,17 @@
       <div>
         <h2>Skills in progress</h2>
           <div class="global-skill">
-            <img src="https://picsum.photos/150/150" alt="">
+            <i class="fas fa-paw" style="font-size:50px"></i>
             <div class="skill">
-              <h4>Cooking</h4>
-              <p>Knows how to cook</p>
+              <h4>Pet-sitting</h4>
+              <p>Knows how to cook a dog</p>
             </div>
           </div>
-          <div class="global-skill">
-            <img src="https://picsum.photos/150/150" alt="">
+          <div class="global-skill" style="font-size:50px">
+            <i class="fas fa-seedling"></i>
             <div class="skill">
-              <h4>Cooking</h4>
-              <p>Knows how to cook</p>
+              <h4>Gardening</h4>
+              <p>Knows how to garden</p>
             </div>
           </div>
       </div>
@@ -80,7 +79,7 @@
       </div>
 
       <div>
-        <div class=" review flex-column">
+        <div class="main-card-review">
           <h2>Reviews</h2>
           <div class="card-review" >
            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -114,11 +113,12 @@
   </div>
 </div>
 
-<!--<%= link_to 'Edit', edit_kid_path(@kid), class: "btn btn-ghost" %>
+<!--
+<%= link_to 'Edit', edit_kid_path(@kid), class: "btn-flat" %>
 <%= link_to 'Back to list', kids_path, class: "btn btn-ghost" %>
 <%= link_to "Delete #{@kid.name}", kid_path(@kid), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-danger" %>
 <h2><%= @kid.name %></h2>
   <p><%= @kid.age %></p>
   <p><%= @kid.localisation %></p>
   <p><%= @kid.service %></p>
-  <p><%= @kid.price %></p>
+  <p><%= @kid.price %></p> -->
