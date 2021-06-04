@@ -5,20 +5,32 @@
   // }
 
 
+.main-class {
+  padding-left: 10px;
+}
+
+#page-name {
+  padding-left: 150px;
+}
+
 .dashboard {
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .demand-stat {
   display: block;
   width: 50vw;
   padding-right: 40px;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
 .box-border {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 8px;
+  margin-bottom: 0px;
 }
 
 .box-border h3{
@@ -28,6 +40,10 @@ padding: 10px 0 10px 10px;
 margin-bottom: 0px;
 background-color: white;
 border-radius: 5px;
+}
+
+.box-stat .box-border {
+  margin-bottom: 0;
 }
 
 .demand {
@@ -72,6 +88,7 @@ border-radius: 5px;
 .notification-manage {
   display: block;
   width: 30vw;
+  margin-bottom: 0;
 }
 
 
@@ -110,6 +127,30 @@ border-radius: 5px;
 }
 
 
+.notification-manage {
+  display: block;
+  width: 30vw;
+}
 
+.notification-manage .box-border {
+  display: flex;
+  flex-direction: column;
+}
 
+.notification-box-border{
+  margin-bottom: 20px;
+}
+
+.card-notification {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+#first-notification {
+  margin-top: 10px;
+}
+
+.notification {
+  margin-bottom: 10px;
+}
 

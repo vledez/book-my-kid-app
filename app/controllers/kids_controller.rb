@@ -19,6 +19,8 @@ class KidsController < ApplicationController
 
   def create
     @kid = Kid.new(kid_params)
+    @user = current_user
+    @kid.user_id = @user.id
     if @kid.save
       redirect_to kid_path(@kid)
     else
@@ -42,7 +44,7 @@ class KidsController < ApplicationController
   private
 
   def kid_params
-    params.require(:kid).permit(:name, :age, :localisation, :service, :price, :photo, :user_id)
+    params.require(:kid).permit(:name, :age, :localisation, :service, :price, :photo)
   end
 
   def set_kid
