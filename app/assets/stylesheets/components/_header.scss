@@ -3,8 +3,6 @@
   background-size: cover;
   background-position: bottom;
   display: flex;
-  width: 100vw;
-  height: 80vh;
   min-width: -webkit-fill-available;
   justify-content: space-around;
     a {
@@ -18,6 +16,11 @@
   }
 }
 
+#header-head{
+text-align: left;
+}
+
+
 
 .text_header {
   min-width: 75%;
@@ -27,15 +30,17 @@
 }
 .brand {
   max-width: 320px;
-  max-height: 400px;
+  // max-height: 400px;
   flex-direction: column;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+  margin-top: 80px;
   z-index: 5;
   position: relative;
   h3 {
-  backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: left;
   }
 
 }
@@ -46,18 +51,17 @@
   color: #D17D67;
   font-size: 1.25rem;
   flex-direction: row-reverse;
+  &:hover {
+    color: #F4F4F4;
+  }
 }
-
-
-// BLUR BACKGROUND
-
 
 
 // CHILD ANIMATION
 
 .animation-area{
   width: 100%;
-  height: 600px;
+  height: 700px;
 }
 
 .child-area{
@@ -87,6 +91,25 @@
     top:1200px;
     transform: rotate(90deg);
   }
-
 }
+
+// ANIMATION TEXT HEADER
+
+// .typewriter {
+//   animation:
+//     typing 3.5s steps(40, end),
+//     blink-caret .75s step-end infinite;
+// }
+
+// /* The typing effect */
+// @keyframes typing {
+//   from { width: 0, }
+//   to { width: 100% }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+//   from, to { border-color: transparent }
+//   50% { border-color: orange; }
+// }
 
