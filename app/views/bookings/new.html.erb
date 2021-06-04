@@ -7,9 +7,12 @@
         <%= form_with(url:"/result", method: "get", local: true, class: "form-group") do |f| %>
           <%= f.label :need, "Service" %>
           <%= f.text_field :need, as: :string, label: false, class: "form-control" %>
+          <br>
           <%= f.date_field :starts_at, as: :string, required: false, class: "form-control", input_html: {class: "datepicker"} %>
+          <br>
           <%= f.date_field :ends_at, as: :string, required: false, class: "form-control", input_html: {class: "datepicker"} %>
           <%= f.hidden_field :id, value: @kid.id %>
+          <br>
           <%= f.submit "Rent me !", class: "big-btn hover shadow-btn" %>
         <% end %>
       </div>
