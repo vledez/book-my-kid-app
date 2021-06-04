@@ -17,7 +17,7 @@
           <%= cl_image_tag @kid.photo.key, class: "avatar-xlarge" %>
         <% end %>
       </div>
-      <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn-flat" %>
+      <%= link_to "Book #{@kid.name}", new_kid_booking_path(@kid), class: "btn-flat big-btn shadow-btn hover" %>
     </div>
   </div>
 
@@ -27,21 +27,21 @@
       <div>
         <h2>Masterized skils</h2>
           <div class="global-skill">
-            <i class="fas fa-utensils" style="font-size:50px"></i>
+            <i class="fas fa-utensils hover" style="font-size:50px"></i>
             <div class="skill">
               <h4>Cooking</h4>
               <p>Speciality Asian food.</p>
             </div>
           </div>
           <div class="global-skill">
-            <i class="fas fa-paint-roller" style="font-size:50px"></i>
+            <i class="fas fa-paint-roller hover" style="font-size:50px"></i>
             <div class="skill">
               <h4>Painting</h4>
               <p>Up to paint an entire room.</p>
             </div>
           </div>
           <div class="global-skill">
-            <i class="fas fa-tools" style="font-size:50px"></i>
+            <i class="fas fa-tools hover" style="font-size:50px"></i>
             <div class="skill">
               <h4>Construction</h4>
               <p>Simple construction only.</p>
@@ -52,14 +52,14 @@
       <div>
         <h2>Skills in progress</h2>
           <div class="global-skill">
-            <i class="fas fa-paw" style="font-size:50px"></i>
+            <i class="fas fa-paw hover" style="font-size:50px"></i>
             <div class="skill">
               <h4>Pet-sitting</h4>
               <p>Still difficult with 3 dogs and more.</p>
             </div>
           </div>
           <div class="global-skill" style="font-size:50px">
-            <i class="fas fa-seedling"></i>
+            <i class="fas fa-seedling hover"></i>
             <div class="skill">
               <h4>Gardening</h4>
               <p>Cut any grass soon.</p>
@@ -120,7 +120,7 @@
       </div>
     </div>
   <hr>
-  <%= link_to 'Back to list', kids_path, class: "btn btn-flat" %>
+  <%= link_to 'Back to list', kids_path, class: "btn btn-flat big-btn shadow-btn hover" %>
   </div>
 
 </div>
