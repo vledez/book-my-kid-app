@@ -24,9 +24,13 @@
                 <p><%= kid.price %>€/day</p>
               </div>
               <div class="location_review">
-                <i class="fas fa-map-marker-alt custom-marker"></i>
-                <p><%= kid.localisation %></p>
+                <div class='d-flex'>
+                  <i class="fas fa-map-marker-alt custom-marker"></i>
+                  <p><%= kid.localisation %></p>
+                </div>
+                <div>
                 <p id="localisation"><%= kid.service %></p>
+                </div>
               </div>
               <div class="book-me">
                 <%= link_to "Book me!", kid_path(kid), class: "btn btn-flat" %>

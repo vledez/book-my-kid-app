@@ -78,27 +78,24 @@
     <div class="manage-box-border">
       <h3>Manage my kid</h3>
       <% @kids.each do |kid| %>
-       <div class="card-kid">
-        <%= link_to kid_path(kid), class:"card-link" do %>
-          <div class="card_picture" style="background-image: url(https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
-          </div>
-              <div class="info_prix">
-                <p><%= kid.name %></p>
-                <p><%= kid.price %>€/heure</p>
-              </div>
-              <div class="location_review">
-                <i class="fas fa-map-marker-alt custom-marker"></i>
-                <p><%= kid.localisation %></p>
-                <p id="localisation"><%= kid.service %></p>
-              </div>
-            <% end %>
+        <div class="card-kid">
+          <%= link_to kid_path(kid), class:"card-link" do %>
+            <div class="card_picture" style="background-image: url(https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+            </div>
+            <div class="info_prix">
+              <p><%= kid.name %></p>
+              <p><%= kid.price %>€/heure</p>
+            </div>
+            <div class="location_review">
+              <i class="fas fa-map-marker-alt custom-marker"></i>
+              <p><%= kid.localisation %></p>
+              <p id="localisation"><%= kid.service %></p>
+            </div>
         <% end %>
+      <% end %>
       </div>
     </div>
-
-
-    </div>
-
   </div>
+</div>
 </div>
 
