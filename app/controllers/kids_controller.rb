@@ -57,4 +57,3 @@ class KidsController < ApplicationController
     @kid = Kid.find(params[:id])
   end
 end
-
