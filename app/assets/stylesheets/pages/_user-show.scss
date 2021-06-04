@@ -1,5 +1,115 @@
-  .demand-stat {
-    display: flex;
-    margin-top: 100px;
-    flex-direction: column;
+  // .demand-stat {
+  //   display: flex;
+  //   margin-top: 100px;
+  //   flex-direction: column;
+  // }
+
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+}
+
+.demand-stat {
+  display: block;
+  width: 50vw;
+  padding-right: 40px;
+}
+
+.box-border {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.box-border h3{
+color: black;
+font-size: 32px;
+padding: 10px 0 10px 10px;
+margin-bottom: 0px;
+background-color: white;
+border-radius: 5px;
+}
+
+.demand {
+  overflow: hidden;
+  height: 120px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+#card-1{
+ margin-top: 0;
+}
+
+.demand .card-review, p, h2 {
+  padding-left: 12px;
+}
+
+.demand .card-review {
+  background-color: #FBF8EA;
+}
+
+
+.demand img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.stat img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.notification img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.notification-manage {
+  display: block;
+  width: 30vw;
+}
+
+
+.box-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.block{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-bottom: 0;
+  hr {
+    width: 100%;
+    margin: 0;
+    margin-top: -8px;
+
   }
+}
+
+.detail{
+  display: flex;
+  min-width: 15vw;
+  flex-direction: column;
+}
+
+.detail p {
+  padding: 0;
+}
+
+.detail h4 {
+  font-weight: bold;
+}
+
+
+
+
+
