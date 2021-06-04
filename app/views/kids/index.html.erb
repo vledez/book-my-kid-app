@@ -15,7 +15,7 @@
 
   <div class="cards">
       <% @kids.each do |kid| %>
-          <div class="card-kid">
+          <div class="card-kid hover shadow-card">
             <%= link_to kid_path(kid), class:"card-link" do %>
               <div class="card_picture" style="background-image: url(https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
               </div>
@@ -36,5 +36,7 @@
       <% end %>
   </div>
   <hr>
+
   <%= link_to 'Back to top', kids_path, class: "btn btn-flat" %>
+
 </div>
