@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
     @end = params[:ends_at]
     @date = @start + " à " + @end
     @kid = Kid.find(params[:id])
-    @booking = Booking.new(need: @service, reservation:@date, kid_id: @kid.id, user_id: current_user.id)
+    @booking = Booking.new(need: @service, reservation: @date, kid_id: @kid.id, user_id: current_user.id)
     if @booking.save
       redirect_to kid_path(@kid)
     else

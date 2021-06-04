@@ -3,11 +3,11 @@
     <div class="d-flex flex-row justify-content-between">
       <div class="col-8">
         <h2><%= @kid.name %>, from <%= @kid.localisation %></h2>
-        <%= form_with(url:"/result", method: "get", local: true) do |f| %>
+        <%= form_with(url:"/result", method: "get", local: true, class: "form-group") do |f| %>
           <%= f.label :need, "Service" %>
-          <%= f.text_field :need, as: :string, label: false %>
-          <%= f.date_field :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.date_field :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.text_field :need, as: :string, label: false, class: "form-control" %>
+          <%= f.date_field :starts_at, as: :string, required: false, input_html: {class: "form-control datepicker"} %>
+          <%= f.date_field :ends_at, as: :string, required: false, input_html: {class: "form-control datepicker"} %>
           <%= f.hidden_field :id, value: @kid.id %>
           <%= f.submit "Rent me !", class: "big-btn" %>
         <% end %>
