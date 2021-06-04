@@ -9,7 +9,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @kid = Kid.find(params[:kid_id])
     @booking.kid = @kid
-
     if @booking.save
       redirect_to kid_path(@kid)
     else
@@ -17,10 +16,24 @@ class BookingsController < ApplicationController
     end
   end
 
-private
+  def generate
+    @service = params[:need]
+    @start = params[:starts_at]
+    @end = params[:ends_at]
+    @date = @start + " à " + @end
+    @kid = Kid.find(params[:id])
+    @booking = Booking.new(need: @service, reservation:@date, kid_id: @kid.id, user_id: current_user.id)
+    if @booking.save
+      redirect_to kid_path(@kid)
+    else
+      render :new
+    end
+  end
 
- def booking_params
-    params.require(:booking).permit(:need, :date, :hour, :user_id, :kid_id)
+  private
+
+  def booking_params
+    params.require(:booking).permit(:user_id, :kid_id)
   end
 
 end
