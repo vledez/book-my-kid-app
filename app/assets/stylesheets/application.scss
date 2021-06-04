@@ -7,6 +7,8 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/airbnb";
 
 // Your CSS partials
 @import "components/index";
@@ -15,6 +17,9 @@
 
 body {
   background-color: $background;
+  .reassurance-bar {
+    background-color: white;
+  }
 }
 
 a:hover {
@@ -41,168 +46,3 @@ p {
   font-size: 18px;
 }
 
-.header {
-  background-image: url(hand-bcg.png);
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  width: 100vh;
-  height: 70vh;
-  min-width: -webkit-fill-available;
-  justify-content: space-around;
-    a {
-      color: white;
-      background-color: $button;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-    h1 {
-      padding-top: 50px
-  }
-}
-
-
-.brand {
-  max-width: 320px;
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 100px;
-}
-
-.reassurance-bar {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.reassurance-card {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.img_reassurance {
-  width: 30%;
-}
-
-
-.container h1 {
-  font-family: $headers-font;
-  font-size: 72px;
-  color: $title;
-  padding: 40px 0px;
-}
-
-.container h3 {
-  line-height: 120%;
-  text-align: center;
-}
-
-.testimonials {
-  margin-top: 100px;
-}
-
-.reviews {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
-
-.review {
-  background-color: $text;
-  width: 450px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 5px;
-  background-size: cover;
-  opacity: 0.95;
-  p {
-    font-size: 14px;
-    color: white;
-  }
-}
-
-#review-right{
-  background-image: url(https://images.unsplash.com/photo-1590649880765-91b1956b8276?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80);
-
-}
-
-#review-left{
-  background-image: url(https://images.unsplash.com/photo-1482235225574-c37692835cf3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80);
-}
-
-#header-head{
-  text-align: left;
-}
-
-.comment {
-  padding-left: 10px;
-}
-.month-child {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  a {
-    color: $text;
-    display: flex;
-    justify-content: center;
-    border: 1px solid $text;
-    border-radius: 6px;
-    padding: 8px 20px;
-    width: fit-content;
-    margin: auto;
-    margin-top: 30px;
-  }
-  h3 {
-    margin-bottom: 40px;
-  }
-}
-
-.child-card {
-  width: 700px;
-  height: 300px;
-  background-image: url(https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
-  background-size: cover;
-  border-radius: 5px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  h3 {
-    color: white;
-    margin-bottom: 10px;
-  }
-}
-
-.tags {
-  display: flex;
-  justify-content: space-between;
-  p {
-  text-align: left;
-  padding-top:8px;
-  padding-left:12px;
-  }
-}
-.stars {
-  text-align: right;
-  padding-top:8px;
-  padding-right:12px;
-}
-
-.fa-star {
-  color: $star
-}
-
-.big-btn {
-  width: 200px;
-  height: 80px;
-  align-self: center;
-}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_084808) do
+ActiveRecord::Schema.define(version: 2021_06_04_103927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_084808) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "kid_id", null: false
+    t.string "reservation"
     t.index ["kid_id"], name: "index_bookings_on_kid_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -62,6 +63,16 @@ ActiveRecord::Schema.define(version: 2021_06_02_084808) do
     t.index ["user_id"], name: "index_kids_on_user_id"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string "service"
+    t.bigint "kid_id", null: false
+    t.bigint "booking_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["booking_id"], name: "index_skills_on_booking_id"
+    t.index ["kid_id"], name: "index_skills_on_kid_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -78,4 +89,6 @@ ActiveRecord::Schema.define(version: 2021_06_02_084808) do
   add_foreign_key "bookings", "kids"
   add_foreign_key "bookings", "users"
   add_foreign_key "kids", "users"
+  add_foreign_key "skills", "bookings"
+  add_foreign_key "skills", "kids"
 end

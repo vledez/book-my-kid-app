@@ -1,7 +1,11 @@
 class KidsController < ApplicationController
   before_action :set_kid, only: [:show, :edit, :update, :destroy]
   def index
-    @kids = Kid.all
+    if params[:query].present?
+      @kids = Kid.search(params[:query])
+    else
+      @kids = Kid.all
+    end
   end
 
   def show
@@ -18,9 +22,13 @@ class KidsController < ApplicationController
   end
 
   def create
+    @location = params[:kid][:localisation].split(',').first
     @kid = Kid.new(kid_params)
     @user = current_user
     @kid.user_id = @user.id
+
+    @kid.localisation = @location
+
     if @kid.save
       redirect_to kid_path(@kid)
     else
@@ -32,6 +40,8 @@ class KidsController < ApplicationController
   end
 
   def update
+    @location = params[:kid][:localisation].split(',').first
+    @kid.localisation = @location
     @kid.update(kid_params)
     redirect_to kid_path(@kid)
   end
@@ -45,10 +55,10 @@ class KidsController < ApplicationController
 
   def kid_params
     params.require(:kid).permit(:name, :age, :localisation, :service, :price, :photo)
+
   end
 
   def set_kid
     @kid = Kid.find(params[:id])
   end
 end
-
