@@ -1,0 +1,44 @@
+.month-child {
+  margin-top: 15vh;
+  margin-bottom: 100px;
+  a {
+    color: $text;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $text;
+    border-radius: 6px;
+    padding: 8px 20px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
+  }
+  h3 {
+    margin-bottom: 40px;
+  }
+}
+
+.child-card {
+  width: 700px;
+  height: 300px;
+  background-image: url(https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+  background-size: cover;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    color: white;
+    margin-bottom: 5vh;
+  }
+}
+
+.tags {
+  display: flex;
+  justify-content: space-between;
+  p {
+  text-align: left;
+  padding-top:8px;
+  padding-left:12px;
+  }
+}
