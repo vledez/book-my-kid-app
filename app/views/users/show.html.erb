@@ -1,1 +1,104 @@
+<div class="main-class">
+  <h1 id="page-name">Dashboard</h1>
+
+  <div class="dashboard">
+    <div class="demand-stat main-card-review">
+
+      <div class="box-border">
+        <h3>Pending demands</h3>
+        <div class="demand card-review" id="card-1" >
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-pending-demand">
+              <p>Marie-Laure </p>
+              <h2>Booking: from 19/04 13:00 to 17:00</h2>
+              <p>Hello! I’m highly interested in renting Ben for building an étagère! Thanks</p>
+            </div>
+        </div>
+        <div class="demand card-review" >
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-pending-demand">
+              <p>Marie-Laure </p>
+              <h2>Booking: from 19/04 13:00 to 17:00</h2>
+              <p>Hello! I’m highly interested in renting Ben for building an étagère! Thanks</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="box-stat box-border">
+        <h3>My stats</h3>
+        <div class="block" >
+          <div class="detail">
+              <h4>4,9</h4>
+              <p>Evalutation</p>
+          </div>
+          <div class="detail">
+              <h4>47</h4>
+              <p>Total comments</p>
+          </div>
+          <div class="detail">
+              <h4>98 %</h4>
+              <p>Respsonse rate</p>
+          </div>
+          <hr>
+          <div class="detail">
+              <h4>235,00 €</h4>
+              <p>Revenue last month</p>
+          </div>
+          <div class="detail" id="border-detail">
+              <h4>78</h4>
+              <p>Views</p>
+          </div>
+          <div class="detail">
+              <h4>3</h4>
+              <p>Booking this month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification-manage box-border">
+      <div class="notification-box-border">
+
+        <h3>Notifications</h3>
+        <div class="notification" >
+            <div class="card-notification" id="first-notification">
+              <h2>Your have a new booking !</h2>
+              <p>Hello! I’m highly interested in renting Ben for building....</p>
+            </div>
+        </div>
+        <hr>
+        <div class="notification" >
+            <div class="card-notification">
+              <h2>Ben have a new review !</h2>
+              <p>Ben was a very good at gardening !</p>
+            </div>
+        </div>
+      </div>
+
+    <div class="manage-box-border">
+      <h3>Manage my kid</h3>
+      <% @kids.each do |kid| %>
+       <div class="card-kid">
+        <%= link_to kid_path(kid), class:"card-link" do %>
+          <div class="card_picture" style="background-image: url(https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
+          </div>
+              <div class="info_prix">
+                <p><%= kid.name %></p>
+                <p><%= kid.price %>€/heure</p>
+              </div>
+              <div class="location_review">
+                <i class="fas fa-map-marker-alt custom-marker"></i>
+                <p><%= kid.localisation %></p>
+                <p id="localisation"><%= kid.service %></p>
+              </div>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+
+
+    </div>
+
+  </div>
+</div>
 
